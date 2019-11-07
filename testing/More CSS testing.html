@@ -1,0 +1,175 @@
+<!Doctype html> 
+
+<html>
+<head>
+<style>
+
+body {
+  font-family: Verdana,sans-serif;
+  font-size: 0.9em;
+}
+
+header, footer {
+  padding: 10px;
+  color: white;
+  background-color: black;
+}
+
+section {
+  margin: 5px;
+  padding: 10px;
+  background-color: lightgrey;
+}
+
+article {
+  margin: 5px;
+  padding: 10px;
+  background-color: white;
+}
+
+nav ul {
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 5px;
+}
+</style>
+<head>
+Finally, change the elements to HTML5 semantic elements:
+
+Example
+
+<body>
+
+<header>
+  <h1>Monday Times</h1>
+</header>
+
+<nav>
+  <ul>
+    <li>News</li>
+    <li>Sports</li>
+    <li>Weather</li>
+  </ul>
+</nav>
+
+<section>
+  <h2>News Section</h2>
+  <article>
+    <h2>News Article</h2>
+    <p>Lorem ipsum dolor sit amet..</p>
+  </article>
+  <article>
+    <h2>News Article</h2>
+    <p>Lorem ipsum dolor sit amet..</p>
+  </article>
+</section>
+
+<footer>
+  <p>&copy; 2014 Monday Times. All rights reserved.</p>
+</footer>
+
+</body>
+The Difference Between <article> <section> and <div>
+There is a confusing (lack of) difference in the HTML5 standard, between <article> <section> and <div>.
+
+In the HTML5 standard, the <section> element is defined as a block of related elements.
+
+The <article> element is defined as a complete, self-contained block of related elements.
+
+The <div> element is defined as a block of children elements.
+
+How to interpret that?
+
+In the example above, we have used <section> as a container for related <articles>.
+
+But, we could have used <article> as a container for articles as well.
+
+Here are some different examples:
+
+<article> in <article>:
+<article>
+
+<h2>Famous Cities</h2>
+
+<article>
+  <h2>London</h2>
+  <p>London is the capital city of England.</p>
+</article>
+
+<article>
+  <h2>Paris</h2>
+  <p>Paris is the capital and most populous city of France.</p>
+</article>
+
+<article>
+  <h2>Tokyo</h2>
+  <p>Tokyo is the capital of Japan.</p>
+</article>
+
+</article>
+<div> in <article>:
+<article>
+
+<h2>Famous Cities</h2>
+
+<div class="city">
+  <h2>London</h2>
+  <p>London is the capital city of England.</p>
+</div>
+
+<div class="city">
+  <h2>Paris</h2>
+  <p>Paris is the capital and most populous city of France.</p>
+</div>
+
+<div class="city">
+  <h2>Tokyo</h2>
+  <p>Tokyo is the capital of Japan.</p>
+</div>
+
+</article>
+<div> in <section> in <article>:
+<article>
+
+<section>
+  <h2>Famous Cities</h2>
+
+  <div class="city">
+    <h2>London</h2>
+    <p>London is the capital city of England.</p>
+  </div>
+
+  <div class="city">
+    <h2>Paris</h2>
+    <p>Paris is the capital and most populous city of France.</p>
+  </div>
+
+  <div class="city">
+    <h2>Tokyo</h2>
+    <p>Tokyo is the capital of Japan.</p>
+  </div>
+</section>
+
+<section>
+  <h2>Famous Countries</h2>
+
+  <div class="country">
+    <h2>England</h2>
+    <p>London is the capital city of England.</p>
+</div>
+
+  <div class="country">
+    <h2>France</h2>
+    <p>Paris is the capital and most populous city of France.</p>
+</div>
+
+  <div class="country">
+    <h2>Japan</h2>
+    <p>Tokyo is the capital of Japan.</p>
+  </div>
+</section>
+
+</article>
