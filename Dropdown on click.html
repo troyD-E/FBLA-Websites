@@ -1,6 +1,22 @@
 <!Doctype html>
 <html>
 <style>
+body {
+	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+	font-size: 18px;
+	font-weight: 300;
+    color: white;
+	overflow-x: hidden;
+    min-height: 100vh;
+    height: 50%;
+    position: relative;
+    background: constructive_bg_02.jpg;
+}
+#preload-01 { background: url(../img/constructive_bg_01.jpg) no-repeat -9999px -9999px; }
+#preload-02 { background: url(../img/constructive_bg_02.jpg) no-repeat -9999px -9999px; }
+#preload-03 { background: url(../img/constructive_bg_03.jpg) no-repeat -9999px -9999px; }
+#preload-04 { background: url(../img/constructive_bg_04.jpg) no-repeat -9999px -9999px; }
+
 .header {
   background-color: #F1F1F1;
   text-align: center;
@@ -13,11 +29,17 @@ li {
 
 /* Dropdown Button */
 .dropbtn {
-  background-color: #3498DB;
-  color: white;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
+ padding: 10px 15px;
+        background: #000000c4;
+        border: 1px solid;
+        color: #33ccff;
+        cursor: pointer;
+        margin-top: 4px;
+        margin-left: 4px;
+        border-radius: 5px;
+        width: 60px;
+        height: 50px;
+        z-index: 1001;
   cursor: pointer;
 }
 
@@ -36,7 +58,7 @@ li {
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #f1f1f1;
+  background-color: white;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
@@ -50,7 +72,7 @@ li {
   display: block;
 }
 
-/* Change color of dropdown links on hover */
+/* Change color of dropdown links on click */
 .dropdown-content a:hover {background-color: #ddd}
 
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
@@ -64,6 +86,34 @@ ul {
   background-color: #333;
 }
 
+.footer-link {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    margin-left: 20px;
+    color: white;
+    text-align:right;    
+    width:100%;
+    z-index: 999;
+}
+
+.footer-link.relative { position: relative; }
+
+.tm-copyright-text {
+    display: inline-block;
+    padding: 5px 30px;
+    background-color: rgba(0,0,0,0.5);
+}
+
+footer a { color: white; }
+
+p {
+    font-size: 1rem;
+    line-height: 2.2;
+}
+
+p:last-child { margin-bottom: 0; }
+
 
 </style>
 
@@ -72,24 +122,32 @@ ul {
 <div class="header">
 <h1> MSB's FBLA Website </h1>
 </div>
-<body>
+<body background="constructive_bg_02.jpg">
 
 <div class="dropdown">
-  <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+  <button onclick="myFunction()" class="dropbtn">&#9776;</button>
   <div id="myDropdown" class="dropdown-content">
     <a href="#home">Home</a>
+	<hr size="4" width="100%" align="left" color="black">
     <a href="#about">About</a>
+<hr size="4" width="100%" align="left" color="black">
     <a href="#contact">Contact</a>
   </div>
 </div>
 
-
+<p> omae wa mou shindriu mmmmm.
 
 
 
 
 </div>
 </div>
+
+<footer class="footer-link">
+					<p class="tm-copyright-text"> Our credits will go here
+                    
+                    -
+				</footer>
 
 
 <script>
