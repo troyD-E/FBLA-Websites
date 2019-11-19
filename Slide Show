@@ -64,6 +64,8 @@ img {vertical-align: middle;}
 @media only screen and (max-width: 300px) {
   .text {font-size: 11px}
 }
+
+
 </style>
 </head>
 <body>
@@ -71,19 +73,45 @@ img {vertical-align: middle;}
 <div class="slideshow-container">
 
 <div class="mySlides fade">
-  <img src="FBLA_PBLA.jpg" style="width:100%">
+	<center>
+  <img src="FBLA_PBLA.jpg" width="1000" height="500">
+	</center>
 </div>
 
 <div class="mySlides fade">
-  <img src="FBLA_STEAM.jpg" style="width:100%">
+	<center>
+  <img src="FBLA_STEAM.jpg" width="1000" height="500">
+	</center>
 </div>
 
 <div class="mySlides fade">
-	<img src="FBLA badge.png" style="width:100%">
+	<center>
+	<img src="FBLA badge.png" width="50%">
+	</center>
 </div>
 
 <div class="mySlides fade">
-	<img src="FBLA Blue flag.jpg" style="width:100%">
+	<center>
+	<img src="STEAM Logo.png" width="50%">
+	</center>
+</div>
+
+<div class="mySlides fade">
+	<center>
+	<img src="FBLA Students.jpg" width="50%">
+	</center>
+</div>
+
+<div class="mySlides fade">
+	<center>
+	<img src="FBLA Students(2).jpg" width="50%">
+	</center>
+</div>
+
+<div class="mySlides fade">
+	<center>
+	<img src="FBLA Students(3).jpg" width="50%">
+	</center>
 </div>
 
 </div>
@@ -93,6 +121,9 @@ img {vertical-align: middle;}
   <span class="dot"></span> 
   <span class="dot"></span> 
   <span class="dot"></span> 
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
   <span class="dot"></span>
 </div>
 <!--You can control how fast the slideshow moves-->
@@ -117,6 +148,6 @@ function showSlides() {
   setTimeout(showSlides, 3000); // Change image every 3 seconds
 }
 </script>
-
+</div>
 </body>
 </html>
