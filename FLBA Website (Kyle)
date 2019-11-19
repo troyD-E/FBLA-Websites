@@ -1,44 +1,344 @@
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<style
-.mySlides {display:none}
-.w3-left, .w3-right, .w3-badge {cursor:pointer}
-.w3-badge {height:13px;width:13px,;padding:0}
+<!Doctype html>
+<html>
+<style>
+body {
+	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+	font-size: 18px;
+	font-weight: 300;
+    color: black;
+	overflow-x: hidden;
+    min-height: 100vh;
+    height: 50%;
+    position: relative;
+    background: constructive_bg_02.jpg;
+}
+.header {
+  background-color: #F1F1F1;
+  text-align: center;
+  padding: 20px;
+}
+li {
+  float: left;
+}
+/* Dropdown Button */
+.dropbtn {
+ padding: 10px 15px;
+        background: #000000c4;
+        border: 1px solid;
+        color: #33ccff;
+        cursor: pointer;
+        margin-top: 4px;
+        margin-left: 4px;
+        border-radius: 5px;
+        width: 60px;
+        height: 50px;
+        z-index: 1001;
+  cursor: pointer;
+}
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #2980B9;
+}
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgba(0,0,0,0.5);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+/* Change color of dropdown links on click */
+.dropdown-content a:hover {background-color: #ddd}
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;} 
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+.footer-link {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    margin-left: 20px;
+    color: white;
+    text-align:right;    
+    width:100%;
+    z-index: 999;
+}
+.footer-link.relative { position: relative; }
+.tm-copyright-text {
+    display: inline-block;
+    padding: 5px 30px;
+    background-color: rgba(0,0,0,0.5);
+}
+footer a { color: white; }
+p {
+    font-size: 1rem;
+    line-height: 2.2;
+	text-align:center;
+}
+p:last-child { margin-bottom: 0; }
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+  float: left;
+  width: 72%;
+  background-color: #D3D3D3;
+}
+/* Right column */
+.rightcolumn {
+  float: right;
+  width: 25%;
+  background-color: #f1f1f1;
+  padding-left: 20px;
+}
+/* Fake image */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+/* Add a card effect for articles */
+.card {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+}
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+}
+</style>
+
+
+
+<div class="header">
+<h1> MSB's FBLA Website </h1>
+</div>
+<body background="constructive_bg_02.jpg">
+
+<div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn">&#9776;</button>
+  <div id="myDropdown" class="dropdown-content">
+    <a href="#home">Home</a>
+	<hr size="4" width="100%" align="left" color="black">
+    <a href="About-us.html">About</a>
+<hr size="4" width="100%" align="left" color="black">
+    <a href="">calendar</a>
+  </div>
+</div>
+<style>
+* {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
 </style>
 </head>
 <body>
-<div class="w3-content w3-display-container" style="max-width:800px">
-  <img class="mySlides" src="FBLA_PBLA.jpg" style="width:100%">
-  <img class="mySlides" src="FBLA_STEAM.jpg" style="width:100%">
-  <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%">
-    <div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
-    <div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
-    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
-    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
-  </div>
+<!--This is where you can add pictures and even change the dot so it moves with the slide show-->
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+	<center>
+  <img src="FBLA_PBLA.jpg" width="1000" height="500">
+	</center>
 </div>
 
+<div class="mySlides fade">
+	<center>
+  <img src="FBLA_STEAM.jpg" width="1000" height="500">
+	</center>
+</div>
+
+<div class="mySlides fade">
+	<center>
+	<img src="FBLA badge.png" width="50%">
+	</center>
+</div>
+
+<div class="mySlides fade">
+	<center>
+	<img src="FBLA Blue flag.jpg" width="50%">
+	</center>
+</div>
+
+<div class="mySlides fade">
+	<center>
+	<img src="STEAM Logo.png" width="50%">
+	</center>
+</div>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span>
+  <span class="dot"></span>
+</div>
+<!--You can control how fast the slideshow moves-->
 <script>
-var slideIndex = 1;
-showDivs(slideIndex);
+var slideIndex = 0;
+showSlides();
 
-function plusDivs(n) {
-	showDivs(slideIndex += n);
-}
-
-function currentDiv(n) {
-	showDivs(slideIndex = n);
-}
-function showDivs(n) {
-	var i;
-	var x = document.getElementsByClassName("mySlides");
-	var dots = document.getElementsByClassName("demo");
-	if (n > x.length) {slideIndex = 1}
-	if (n < 1) {slideIndex = x.length}
-	for (i = 0; i < x.length; i++ {
-		dots[i].className = dots[i].className.replace(" w3-white", "");
-	}
-	x[SlideIndex-1].style.display = "block";
-	dots[slideIndex-1].className += " w3-white";
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 3000); // Change image every 3 seconds
 }
 </script>
+</div>
+
+<div class="leftcolumn">
+<p> FBLA stands the Fututre Buisness Leaders of America. What FBLA does is help
+prepare students for careers in buisness thorugh academic competitons, leadership developement,
+and educational programs.
+For more information refer to <a href="https://www.fbla-pbl.org/fbla/"> The offical FBLA website</a> </p>
+<div class="footer_social_button">
+	<a href="https://instagram.com/samsbfbla?igshid=u0km7vij0q8">
+		<img src="Instagram logo.png" width="24" height="24" alt="Instagram" title="Instagram">
+	</a>
+	<a href="https://twitter.com/samsbfbla">
+		<img src="Twitter logo.png" width="24" height="24" alt="Twitter" title="Twitter">
+	</a>
+</div>
+</div>
+
+<div class="rightcolumn">
+<p> Something like a small version of calendar that leads into the full-sized version
+can be here. </P>
+
+
+</div>
+</div>
+
+<body style="background-color:#808080">
+<footer class="tm-container-outer">
+
+<footer class="footer-link">
+<body style="background-color:#808080">
+<script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+/* Close the dropdown menu if the user clicks outside of it */
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+} 
+</script>
+
+<div class="row">
+<div class="leftcolumn">
