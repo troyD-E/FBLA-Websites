@@ -1,8 +1,13 @@
 <!Doctype html>
 
+
+
 <html>
 
+
+
 <style>
+
 /**
  * ALL the UI design credit goes to:
  * https://www.sketchappsources.com/free-source/2676-calendar-template-sketch-freebie-resource.html
@@ -33,68 +38,85 @@
 
 /* SIDEBAR */
 
-li {
-  float: left;
+main {
+  grid-area: content;
+  padding: 48px;
 }
 
-/* Dropdown Button */
-.dropbtn {
- padding: 10px 15px;
-        background: #000000c4;
-        border: 1px solid;
-        color: #33ccff;
-        cursor: pointer;
-        margin-top: 4px;
-        margin-left: 4px;
-        border-radius: 5px;
-        width: 60px;
-        height: 50px;
-        z-index: 1001;
-  cursor: pointer;
+sidebar {
+  grid-area: sidebar;
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-rows: 3fr 1fr;
+  grid-template-areas: "logo menu avatar"
+                       "copyright menu avatar";
 }
-
-/* Dropdown button on hover & focus */
-.dropbtn:hover, .dropbtn:focus {
-  background-color: #2980B9;
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-
-/* The container <div> - needed to position the dropdown content */
-.dropdown {
-  position: relative;
-  display: inline-block;
+.copyright {
+  text-align: center;
 }
-
-/* Dropdown Content (Hidden by Default) */
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: rgba(0,0,0,0.5);
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
+.avatar {
+  grid-area: avatar;
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
 }
-
-/* Links inside the dropdown */
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
+.avatar__name {
+  flex: 1;
+  text-align: right;
+  margin-right: 1em;
+}
+.avatar__img > img {
   display: block;
 }
 
-/* Change color of dropdown links on click */
-.dropdown-content a:hover {background-color: #ddd}
+.copyright {
+  grid-area: copyright;
+}
+.menu {
+  grid-area: menu;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.logo {
+  grid-area: logo;
+}
+.menu__text {
+  display: none;
+}
 
-/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
-.show {display:block;} 
-
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: white;
- 
+@media screen and (min-width: 850px) {
+  sidebar {
+    grid-template-areas: "logo"
+                         "avatar"
+                         "menu"
+                         "copyright";
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px auto 1fr 50px;
+  }
+  
+  .menu {
+    flex-direction: column;
+    align-items: normal;
+    justify-content: flex-start;
+  }
+  .menu__text {
+    display: inline-block;
+  }
+  .avatar {
+    flex-direction: column;
+  }
+  .avatar__name {
+    margin: 1em 0;
+  }
+  .avatar__img > img {
+    border-radius: 50%;
+  }
 }
 
 
@@ -116,7 +138,7 @@ ul {
   grid-template-columns: repeat(7, 1fr);  
 }
 .calendar__week {
-  grid-auto-rows: 100px;
+  grid-auto-rows: 155px;
   text-align: right;
 }
 
@@ -127,7 +149,9 @@ ul {
 }
 
 .calendar__day {
-  padding: 16px;
+  padding: 10px;
+
+  
 }
 
 
@@ -251,6 +275,80 @@ main {
   font-weight: 500;
   box-shadow: 1px 2px 30px -5px var(--red);
 }
+/* Dropdown Button */
+.dropbtn {
+ padding: 10px 15px;
+        background: #000000c4;
+        border: 1px solid;
+        color: #33ccff;
+        cursor: pointer;
+        margin-top: 4px;
+        margin-left: 4px;
+        border-radius: 5px;
+        width: 60px;
+        height: 50px;
+        z-index: 1001;
+  cursor: pointer;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #2980B9;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgba(0,0,0,0.5);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on click */
+.dropdown-content a:hover {background-color: #ddd}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;} 
+
+/* Footer */
+
+.footer {
+
+  padding: 20px;
+
+  text-align: center;
+
+  background: black;
+
+  margin-top: 10px;
+
+  color: white;
+
+  
+
+}
+
+
+
+footer a { color: white; }
+
+
 
 </style>
 
@@ -258,24 +356,7 @@ main {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<body background="constructive_bg_02.jpg">
 
 
 
@@ -284,12 +365,12 @@ main {
   <main>
     <div class="toolbar">
       <div class="toggle">
-        <div class="toggle__option">week</div>
+        <div class="toggle__option"></div>
         <div class="toggle__option toggle__option--selected">month</div>
       </div>
       <div class="current-month">December 2019</div>
       <div class="search-input">
-        
+  
         <i class="fa fa-search"></i>
       </div>
     </div>
@@ -304,25 +385,40 @@ main {
         <div>sun</div>
       </div>
       <div class="calendar__week">
-        <div class="calendar__day day">1</div>
+        <div class="calendar__day day">1
+		
+		</div>
         <div class="calendar__day day">2</div>
         <div class="calendar__day day">3</div>
-        <div class="calendar__day day">4</div>
-        <div class="calendar__day day">5</div>
-        <div class="calendar__day day">6</div>
-        <div class="calendar__day day">7</div>
+        <div class="calendar__day day">4
+		<li> ACTE Convention—Anaheim</li>
+		</div>
+        <div class="calendar__day day">5
+		<li> ACTE Convention—Anaheim</li>
+		</div>
+        <div class="calendar__day day">6
+		<li> ACTE Convention—Anaheim</li>
+		<li>Fall Stock Market Game ends</li>
+		</div>
+        <div class="calendar__day day">7
+		<li> ACTE Convention—Anaheim</li>
+		</div>
       </div>
       <div class="calendar__week">
         <div class="calendar__day day">8</div>
         <div class="calendar__day day">9</div>
-        <div class="calendar__day day">10</div>
+        <div class="calendar__day day">10
+		<li> Non-Stop November ends</li>
+		</div>
         <div class="calendar__day day">11</div>
         <div class="calendar__day day">12</div>
         <div class="calendar__day day">13</div>
         <div class="calendar__day day">14</div>        
       </div>
       <div class="calendar__week">
-        <div class="calendar__day day">15</div>
+        <div class="calendar__day day">15
+		<li> Dues deadline to receive winter publications</li>
+		</div>
         <div class="calendar__day day">16</div>
         <div class="calendar__day day">17</div>
         <div class="calendar__day day">18</div>
@@ -351,20 +447,31 @@ main {
     </div>
   </main>
   <sidebar>
-   <div class="dropdown">
+  <a href="calendar.html">&rarr;</a>
+    <div class="logo">logo</div>
+    <div class="avatar">
+      <div class="avatar__img">
+        <img src="https://picsum.photos/70" alt="avatar">
+      </div>
+      <div class="avatar__name">Steam high FBLA</div>
+   
+<div class="dropdown">
   <button onclick="myFunction()" class="dropbtn">&#9776;</button>
   <div id="myDropdown" class="dropdown-content">
-    <a href="#home">Home</a>
+    <a href="Dropdown on click.html">Home</a>
 	<hr size="4" width="100%" align="left" color="black">
     <a href="About-us.html">About</a>
 <hr size="4" width="100%" align="left" color="black">
     <a href="calendar.html">calendar</a>
   </div>
 </div>
+    </nav>
+    <div class="copyright">copyright &copy; 2019</div>
   </sidebar>
 </div>
 
-script>
+
+<script>
 /* When the user clicks on the button, 
 toggle between hiding and showing the dropdown content */
 function myFunction() {
@@ -385,3 +492,47 @@ window.onclick = function(event) {
   }
 } 
 </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
