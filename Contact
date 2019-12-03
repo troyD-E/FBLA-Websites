@@ -1,0 +1,266 @@
+<!Doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<body>
+<style>
+body {
+	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+	font-size: 18px;
+	font-weight: 300;
+    color: black;
+	overflow-x: hidden;
+    min-height: 100vh;
+    height: 50%;
+    position: relative;
+    background: constructive_bg_02.jpg;
+}
+.header {
+  background-color: #F1F1F1;
+  text-align: center;
+  padding: 20px;
+}
+li {
+  float: left;
+}
+/* Dropdown Button */
+.dropbtn {
+ padding: 10px 15px;
+        background: #000000c4;
+        border: 1px solid;
+        color: #33ccff;
+        cursor: pointer;
+        margin-top: 4px;
+        margin-left: 4px;
+        border-radius: 5px;
+        width: 60px;
+        height: 50px;
+        z-index: 1001;
+  cursor: pointer;
+}
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #2980B9;
+}
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgba(0,0,0,0.5);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+/* Change color of dropdown links on click */
+.dropdown-content a:hover {background-color: #ddd}
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;} 
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+.footer-link {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    margin-left: 20px;
+    color: white;
+    text-align:right;    
+    width:100%;
+    z-index: 999;
+}
+.footer-link.relative { position: relative; }
+.tm-copyright-text {
+    display: inline-block;
+    padding: 5px 30px;
+    background-color: rgba(0,0,0,0.5);
+}
+footer a { color: white; }
+p {
+    font-size: 1rem;
+    line-height: 2.2;
+	text-align:center;
+}
+p:last-child { margin-bottom: 0; }
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+  float: left;
+  width: 72%;
+  background-color: #D3D3D3;
+}
+/* Right column */
+.rightcolumn {
+  float: right;
+  width: 25%;
+  background-color: #f1f1f1	;
+  padding-left: 20px;
+}
+/* Fake image */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+/* Add a card effect for articles */
+.card {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+}
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+}
+</style>
+
+<div class="header">
+<h1> MSB's FBLA Website </h1>
+</div>
+<body background="constructive_bg_02.jpg">
+
+<div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn">&#9776;</button>
+  <div id="myDropdown" class="dropdown-content">
+    <a class="active" href="home.html">Home Page</a>
+	<hr size="4" width="100%" align="left" color="black">
+    <a href="Credits.html">About FBLA</a>
+	<hr size="4" width="100%" align="left" color="black">
+    <a href="Calender.html">Calender</a>
+	<hr size="4" width="100%" alighn="left" color="black">
+	<a href="Contact.html">Contact</a>
+	<hr size="4" width="100%" align="left" color="black">
+  </div>
+</div>
+
+<body style="background-color:#808080">
+<footer class="tm-container-outer">
+
+<footer class="footer-link">
+<body style="background-color:#808080">
+<script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+} 
+</script>
+</footer>
+
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+
+input[type=text], select, textarea {
+	width: 100%;
+	padding: 12px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+	margin-top: 6px;
+	margin-bottom: 16px;
+	resize: vertical;
+}
+
+input[type=submit] {
+	background-color: #4CAF50;
+	color: white;
+	padding: 12px 20px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+input[type=submit]:hover {
+	background-color: #45a049;
+}
+
+.container {
+	border-radius: 5px;
+	background-color: #f2f2f2;
+	padding: 20px;
+}
+</style>
+</head>
+<body>
+
+<h3>Contact Form</h3>
+
+<div class="container">
+	<form action="/action_page.php">
+		<label for="fname">First Name</label>
+		<input type="text" id="fname" name="firstname" placeholder="Your name..">
+		
+		<label for="lname">Last Name</label>
+		<input type="text" id="lname" name="lastname" placeholder="Your last name..">
+		
+		<label for="contact">Contact Us</label>
+			<textarea id="contact" name="contact" placeholder="Write something.."
+			style="height:200px"></textarea>
+			
+			<input type="submit" value="Submit">
+	</form>
+</div>
+
+
+		
+<div>
+<div class="contact-social">
+			<a href="https://twitter.com/samsbfbla">
+		<img src="Twitter logo.png" width="24" height="24" alt="Twitter" title="Twitter">
+	</a>
+	
+	<a href="https://instagram.com/samsbfbla?igshid=u0km7vij0q8">
+		<img src="Instagram logo.png" width="24" height="24" alt="Instagram" title="Instagram">
+	</a>
+	
+
+</div>
+</div>
+</body>
+</html>
