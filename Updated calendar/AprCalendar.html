@@ -354,7 +354,23 @@ footer a { color: white; }
   color: white;
 }
 
+.dropdowns {
+  position: relative;
+  display: inline-block;
+}
 
+.dropdown-contents {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+.dropdowns:hover .dropdown-contents {
+  display: block;
 
 </style>
 
@@ -374,7 +390,7 @@ footer a { color: white; }
         <div class="toggle__option"></div>
         <div class="toggle__option toggle__option--selected">month</div>
       </div>
-      <div class="current-month">March 2020</div>
+      <div class="current-month">April 2020</div>
       <div class="search-input">
   
         <i class="fa fa-search"></i>
@@ -393,15 +409,24 @@ footer a { color: white; }
       <div class="calendar__week">
         <div class="calendar__day day">1
         <li>Membership Madness and Membership Mania: Receipt deadline</li>
+	
+		<div class="dropdowns">
+		<span>read more</span>
+  <div class="dropdown-contents">
 		<li>Membership Achievement Award: Receipt deadline</li>
+	
+	<li>National dues deadline to receive spring publications</li>
 		<li>100 Percent Class Participation: Receipt deadline </li>
 		<li>Outstanding Chapter: Receipt deadline</li>
 		<li>Distinguished Business Leader Scholarship: Receipt deadline</li>
 		<li>Chapter/State/National Membership Recognition Awards: Receipt deadline</li>]
 		<li>National Bylaws Amendment: Receipt deadline</li>
+</div>
+	</div>	
+		
 		</div>
         <div class="calendar__day day">2</div>
-		<li>Spring Stock Market Game Registration deadline</li>
+		
 		
 	
         <div class="calendar__day day">3</div>
@@ -473,6 +498,7 @@ footer a { color: white; }
     </div>
   </main>
   <sidebar>
+  <a href="MarCalendar.html">&#8592;</a>
   <a href="MayCalendar.html">&rarr;</a>
     <div class="logo">logo</div>
     <div class="avatar">
