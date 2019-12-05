@@ -354,7 +354,24 @@ footer a { color: white; }
   color: white;
 }
 
+.dropdowns {
+  position: relative;
+  display: inline-block;
+}
 
+.dropdown-contents {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+.dropdowns:hover .dropdown-contents {
+  display: block;
+}
 
 </style>
 
@@ -374,7 +391,7 @@ footer a { color: white; }
         <div class="toggle__option"></div>
         <div class="toggle__option toggle__option--selected">month</div>
       </div>
-      <div class="current-month">June/July 2020</div>
+      <div class="current-month">October 2019</div>
       <div class="search-input">
   
         <i class="fa fa-search"></i>
@@ -397,10 +414,11 @@ footer a { color: white; }
         <div class="calendar__day day">2</div>
         <div class="calendar__day day">3</div>
         <div class="calendar__day day">4
+		<li>NFLC—Washington, D.C.: Early bird Registration deadline</li>
 		
 		</div>
         <div class="calendar__day day">5
-	<li>Last day to make competitive events changes by 11:59 p.m. eastern</li>
+
 		</div>
         <div class="calendar__day day">6
 	
@@ -412,29 +430,59 @@ footer a { color: white; }
       <div class="calendar__week">
         <div class="calendar__day day">8</div>
         <div class="calendar__day day">9</div>
-		<li>FBLA Local Voting Delegates: Registration deadline</li>
+	
         <div class="calendar__day day">10
 	
 		</div>
-        <div class="calendar__day day">11</div>
-        <div class="calendar__day day">12</div>
+        <div class="calendar__day day">11
+		<li>NFLC—Birmingham: Early bird registration deadline</li>
+       </div>
+
+	   <div class="calendar__day day">12</div>
         <div class="calendar__day day">13</div>
-        <div class="calendar__day day">14</div>        
+        <div class="calendar__day day">14
+		<li>LifeSmarts Fall Competition begins</li>
+		</div>   
+		
       </div>
       <div class="calendar__week">
         <div class="calendar__day day">15
-		<li> Dues deadline to receive winter publications</li>
+		
 		</div>
-        <div class="calendar__day day">16</div>
+        <div class="calendar__day day">16
+		<li>Fall Stock Market Game Registration deadline</li>
+		
+		</div>
+		
         <div class="calendar__day day">17</div>
-        <div class="calendar__day day">18</div>
+        <div class="calendar__day day">18
+		<li>NFLC—Denver: Early bird registration deadline</li>
+		</div>
         <div class="calendar__day day">19</div>
-        <div class="calendar__day day">20</div>
+        <div class="calendar__day day">20
+		<li>Membership deadline for fall publications and chapter/state membership awards at NFLCs</li>
+			<div class="dropdowns">
+  <span>read more</span>
+  <div class="dropdown-contents">
+		<li>Super Sweeps ends</li>
+</div>
+	</div>	
+		</div>
         <div class="calendar__day day">21</div>    
       </div>
       <div class="calendar__week">
-        <div class="calendar__day day">22</div>
-        <div class="calendar__day day">23</div>
+        <div class="calendar__day day">22
+		<li>Virtual Business Finance Fall Challenge competitive event begins</li>
+			<div class="dropdowns">
+  <span>read more</span>
+  <div class="dropdown-contents">
+		<li>Virtual Business Management Fall Challenge competitive event begins</li>
+</div>
+	</div>	
+
+        </div>
+		
+		<div class="calendar__day day">23</div>
         <div class="calendar__day day">24</div>
         <div class="calendar__day day">25</div>
         <div class="calendar__day day">26</div> 
@@ -442,19 +490,18 @@ footer a { color: white; }
         <div class="calendar__day day">28</div> 
       </div>
       <div class="calendar__week">
-        <div class="calendar__day day">29</div>
+        <div class="calendar__day day">29
 		<li> FBLA NLC—Salt Lake City(June 29-July 2) </li>
+		</div>
         <div class="calendar__day day">30</div>
         <div class="calendar__day day">31</div>
-        <div class="calendar__day day">1</div>
-        <div class="calendar__day day">2</div>
-        <div class="calendar__day day">3</div>
-        <div class="calendar__day day">4</div>
+       
       </div>
     </div>
   </main>
   <sidebar>
-  <a href="calendar.html">&rarr;</a>
+  <a href="Sep.html">&#8592;</a>
+  <a href="NovCalendar.html">&rarr;</a>
     <div class="logo">logo</div>
     <div class="avatar">
       <div class="avatar__img">
@@ -544,3 +591,8 @@ window.onclick = function(event) {
 
 
 </html>
+
+
+
+
+
