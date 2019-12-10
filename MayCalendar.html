@@ -138,12 +138,12 @@ sidebar {
   grid-template-columns: repeat(7, 1fr);  
 }
 .calendar__week {
-  grid-auto-rows: 155px;
+  grid-auto-rows: 220px;
   text-align: right;
 }
 
 .calendar__header {
-  grid-auto-rows: 50px;
+  grid-auto-rows: 60px;
   align-items: center;
   text-align: center;
 }
@@ -353,7 +353,24 @@ footer a { color: white; }
   background-color: #4CAF50;
   color: white;
 }
+.dropdowns {
+  position: relative;
+  display: inline-block;
+}
 
+.dropdown-contents {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+.dropdowns:hover .dropdown-contents {
+  display: block;
+}
 
 
 </style>
@@ -374,7 +391,7 @@ footer a { color: white; }
         <div class="toggle__option"></div>
         <div class="toggle__option toggle__option--selected">month</div>
       </div>
-      <div class="current-month">December 2019</div>
+      <div class="current-month">May 2020</div>
       <div class="search-input">
   
         <i class="fa fa-search"></i>
@@ -391,71 +408,121 @@ footer a { color: white; }
         <div>sun</div>
       </div>
       <div class="calendar__week">
+	    <div class="calendar__day day"></div>
+		  <div class="calendar__day day"></div>
+		    <div class="calendar__day day"></div>
+			  <div class="calendar__day day"></div>
+        <div class="calendar__day day">1
+        <li>FBLA Adviser Wall of Fame: Application postmark deadline</li>
+	
+		</div>
         <div class="calendar__day day">2</div>
+		
+		
+	
         <div class="calendar__day day">3</div>
+</div>
+      <div class="calendar__week">
+		
+
         <div class="calendar__day day">4
-		<li> ACTE Convention—Anaheim</li>
+		
 		</div>
         <div class="calendar__day day">5
-		<li> ACTE Convention—Anaheim</li>
+		
 		</div>
         <div class="calendar__day day">6
-		<li> ACTE Convention—Anaheim</li>
-		<li>Fall Stock Market Game ends</li>
+	
 		</div>
         <div class="calendar__day day">7
-		<li> ACTE Convention—Anaheim</li>
-		</div>
-		<div class="calendar__day day">8</div>
+	
+	
+	
       </div>
-      <div class="calendar__week">
-        
+      
+        <div class="calendar__day day">8
+		
+		<li>National Leadership Conference: Intern application receipt deadline</li>
+		<div class="dropdowns">
+  <span>read more</span>
+  <div class="dropdown-contents">
+		<li>Businessperson of the Year Nomination: Receipt deadline</li>
+		<li>Competitive Event Registration due (from state advisers) by 11:59 p.m. eastern</li>
+		<li>All prejudged materials must be received at the national center by 11:59 p.m. eastern</li>
+</div>
+	</div>	
+	
+		
+		
+		
+		</div>
+	
         <div class="calendar__day day">9</div>
         <div class="calendar__day day">10
-		<li> Non-Stop November ends</li>
+		
 		</div>
+		</div>
+		      <div class="calendar__week">
         <div class="calendar__day day">11</div>
         <div class="calendar__day day">12</div>
         <div class="calendar__day day">13</div>
-        <div class="calendar__day day">14</div>    
- <div class="calendar__day day">15
-		<li> Dues deadline to receive winter publications</li>
-		</div>		
-      </div>
-      <div class="calendar__week">
-       
+        <div class="calendar__day day">14</div>        
+  
+        <div class="calendar__day day">15
+		<li>March of Dimes Fundraising Report: Receipt deadline</li>
+		<li>National officer candidate application: Receipt deadline</li>
+		
+			<div class="dropdowns">
+  <span>read more</span>
+  <div class="dropdown-contents">
+		<li>FBLA State Chapter Voting Delegates: Receipt deadline</li>
+		<li>All competitive events computer production tests must be received at the national center by 11:59 p.m. eastern </li>
+		<li>FBLA NLC: Early bird registration deadline</li>
+</div>
+	</div>	
+		
+		</div>
         <div class="calendar__day day">16</div>
         <div class="calendar__day day">17</div>
+		</div>      
+		<div class="calendar__week">
         <div class="calendar__day day">18</div>
         <div class="calendar__day day">19</div>
         <div class="calendar__day day">20</div>
-        <div class="calendar__day day">21</div>    
-		<div class="calendar__day day">22</div>
-      </div>
-      <div class="calendar__week">
-        
+        <div class="calendar__day day">21</div>   
+
+
+        <div class="calendar__day day">22</div>
         <div class="calendar__day day">23</div>
-        <div class="calendar__day day">24</div>
+        <div class="calendar__day day">24
+		<li>Spring Stock Market Game ends</li>
+		<li>CSA Achievement award: Receipt deadline</li>
+		</div>
+		</div>
+		      <div class="calendar__week">
         <div class="calendar__day day">25</div>
         <div class="calendar__day day">26</div> 
         <div class="calendar__day day">27</div> 
         <div class="calendar__day day">28</div> 
-		<div class="calendar__day day">29</div>
-      </div>
-      <div class="calendar__week">
+		
+      
+ 
         
-        <div class="calendar__day day">30</div>
+        <div class="calendar__day day">29</div>
+        <div class="calendar__day day">30
+		<li>Professional Membership National Recognition Awards: Receipt deadline</li>
+		
+		
+		</div>
         <div class="calendar__day day">31</div>
-        <div class="calendar__day day"></div>
-        <div class="calendar__day day"></div>
-        <div class="calendar__day day"></div>
-        <div class="calendar__day day"></div>
+     
+      
       </div>
     </div>
   </main>
   <sidebar>
-    <a href="NovCalendar.html">&#8592;</a>
-  <a href="JanCalendar.html">&rarr;</a>
+  <a href="AprCalendar.html">&#8592;</a>
+  <a href="JunCalendar.html">&rarr;</a>
     <div class="logo">logo</div>
     <div class="avatar">
       <div class="avatar__img">
@@ -464,9 +531,9 @@ footer a { color: white; }
       <div class="avatar__name">Steam high FBLA</div>
    
 <div class="dropdown">
-  <button onclick="myFunction()" class="dropbtn">&#9776;</button>
+  <button onclick="myFunction1()" class="dropbtn">&#9776;</button>
   <div id="myDropdown" class="dropdown-content">
-   <a href="Home Page.html">Home Page</a>
+  <a href="Home Page.html">Home Page</a>
 	<hr size="4" width="100%" align="left" color="black">
     <a href="About Page.html">About FBLA</a>
 	<hr size="4" width="100%" align="left" color="black">
@@ -486,6 +553,26 @@ footer a { color: white; }
 /* When the user clicks on the button, 
 toggle between hiding and showing the dropdown content */
 function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+} 
+
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction1() {
   document.getElementById("myDropdown").classList.toggle("show");
 }
 
