@@ -138,7 +138,7 @@ sidebar {
   grid-template-columns: repeat(7, 1fr);  
 }
 .calendar__week {
-  grid-auto-rows: 155px;
+  grid-auto-rows: 90px;
   text-align: right;
 }
 
@@ -166,7 +166,7 @@ sidebar {
 body {
   font-family: Montserrat;
   font-weight: 100;
-  color: #A8B2B9;
+  color: ;
 }
 
 sidebar {
@@ -176,7 +176,7 @@ sidebar {
 }
 
 main {
-  background-color: #FCFBFC;
+  background-color: (0,0,128,);
 }
 
 .avatar__name {
@@ -354,6 +354,24 @@ footer a { color: white; }
   color: white;
 }
 
+.dropdowns {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-contents {
+  display: none;
+  position: ;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+.dropdowns:hover .dropdown-contents {
+  display: block;
+}
 
 
 </style>
@@ -393,35 +411,61 @@ footer a { color: white; }
       <div class="calendar__week">
         <div class="calendar__day day">2</div>
         <div class="calendar__day day">3</div>
-        <div class="calendar__day day">4
-		<li> ACTE Convention—Anaheim</li>
+        <div class="calendar__day day">
+			<div class="dropdowns">
+  <span>4</span>
+  <div class="dropdown-contents">
+			<li> ACTE Convention—Anaheim</li></div>
+	</div>	
+
 		</div>
-        <div class="calendar__day day">5
-		<li> ACTE Convention—Anaheim</li>
+        <div class="calendar__day day">		<div class="dropdowns">
+  <span>5</span>
+  <div class="dropdown-contents">
+			<li> ACTE Convention—Anaheim</li></div>
+	</div>	
 		</div>
-        <div class="calendar__day day">6
-		<li> ACTE Convention—Anaheim</li>
-		<li>Fall Stock Market Game ends</li>
+        <div class="calendar__day day">
+				<div class="dropdowns">
+  <span>6</span>
+  <div class="dropdown-contents">
+			<li> ACTE Convention—Anaheim</li>
+			<li>Fall Stock Market Game ends</li>
+			</div>
+	</div>	
+		
 		</div>
-        <div class="calendar__day day">7
-		<li> ACTE Convention—Anaheim</li>
+        <div class="calendar__day day"><div class="dropdowns">
+  <span>7</span>
+  <div class="dropdown-contents">
+			<li> ACTE Convention—Anaheim</li></div>
+	</div>	
 		</div>
 		<div class="calendar__day day">8</div>
       </div>
       <div class="calendar__week">
         
         <div class="calendar__day day">9</div>
-        <div class="calendar__day day">10
-		<li> Non-Stop November ends</li>
+        <div class="calendar__day day"><div class="dropdowns">
+  <span>10</span>
+  <div class="dropdown-contents">
+				<li> Non-Stop November ends</li></div>
+	</div>	
 		</div>
+		
+	
+	
         <div class="calendar__day day">11</div>
         <div class="calendar__day day">12</div>
         <div class="calendar__day day">13</div>
         <div class="calendar__day day">14</div>    
- <div class="calendar__day day">15
-		<li> Dues deadline to receive winter publications</li>
-		</div>		
+ <div class="calendar__day day"><div class="dropdowns">
+  <span>15</span>
+  <div class="dropdown-contents">
+				<li> Dues deadline to receive winter publications</li></div>
+	</div>	
       </div>
+	  </div>
       <div class="calendar__week">
        
         <div class="calendar__day day">16</div>
